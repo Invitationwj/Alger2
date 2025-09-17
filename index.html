@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation de mariage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cormorant', serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('fondz1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .invitation-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2em;
+            margin: 1em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+
+        .text-content {
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        .text-content p, .text-content div {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .date-location {
+        
+            font-size: 1em;
+            margin-top: 1.5em;
+        }
+
+        .rsvp-form {
+            margin-top: 2em;
+            border-top: 1px solid #fff;
+            padding-top: 1em;
+    
+        }
+
+        .rsvp-form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .rsvp-form input[type="text"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+            font-family: 'Cormorant', serif;
+        }
+
+        .rsvp-form input[type="radio"] {
+            margin-right: 0.5em;
+        }
+
+        .rsvp-form textarea {
+            width: 100%;
+            padding: 0.5em;
+            box-sizing: border-box;
+            font-family: 'Cormorant', serif;
+        }
+
+        .signature {
+            margin-top: 2em;
+            text-align: right;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .invitation-card {
+                padding: 1.5em;
+            }
+            .text-content {
+                font-size: 1em;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+        form input[type="submit"] {
+  background: black;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #444;
+}
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="text-content">
+            <p>Chers amis,</p>
+            <p>C’est avec une immense joie que nous vous annonçons un événement spécial cet automne — notre mariage 🙌🏻</p>
+            
+            <p class="date-location">
+                📅 Samedi 1er novembre 2025<br>
+                🕖 À partir de 19h<br>
+                📍 Val d’Hydra, Alger
+            </p>
+            
+            <p>Nous serions ravis de partager avec vous ce moment unique, empreint d’amour et de convivialité.<br>
+            Votre présence à nos côtés sera le plus beau des cadeaux.</p>
+            
+            <p>🙏 Merci de confirmer votre présence avant le 1 octobre 2025 (après, vous risquez d’avoir droit à nos relances intensives sur WhatsApp 📲).</p>
+            
+            <div class="rsvp-form">
+                <form id="rsvp-form" action="https://formspree.io/f/xdklnnpg" method="POST" novalidate>
+                <label for="nom">Nom/Prénom</label>
+                <input type="text" id="nom" name="nom">
+                
+                <p>
+                    <input type="radio" id="oui" name="presence" value="oui">
+                    <label for="oui">Oui, je viens ! </label>
+                </p>
+                <p>
+                    <input type="radio" id="non" name="presence" value="non">
+                    <label for="non">Non, je ne viens pas… (et je le regretterai toute ma vie ).</label>
+                </p>
+                <button type="submit">Envoyer ma réponse</button>
+                  </form>
+                <p>
+                    🍽️ Pour le dîner, qui débutera à 20h, si vous avez des allergies, des restrictions alimentaires merci de nous l’indiquer en commentaire ci-dessous.
+                </p>
+                <textarea id="commentaires" name="commentaires" rows="4"></textarea>
+            </div>
+            
+            <p><strong>Dress code:</strong><br>
+            Femmes: Tenue traditionnelle<br>
+            Hommes: venez comme vous êtes ..( mais au minimum en costard + chemise)</p>
+            
+            <p>Nous avons hâte de vivre ce moment mémorable avec vous !</p>
+            
+            <p>On vous dit à très vite 🙂</p>
+            
+            <p class="signature">Avec toute notre affection,<br>
+            W & J</p>
+        </div>
+    </div>
+</body>
+</html>
